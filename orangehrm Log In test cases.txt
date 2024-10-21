@@ -1,0 +1,90 @@
+Test cases for the login scenario:
+
+---
+
+Test Case 1: Valid Login
+
+Description: Verify that the user can successfully log in with valid credentials.
+
+Steps:
+1. Enter a valid username ("Admin").
+2. Enter a valid password ("admin123").
+3. Click the "Login" button.
+
+Expected Result: User is redirected to the dashboard.
+
+---
+
+Test Case 2: Invalid Username
+ 
+Description: Verify that the user cannot log in with an invalid username.
+
+Steps:
+1. Enter an invalid username ("InvalidUser").
+2. Enter a valid password ("admin123").
+3. Click the "Login" button.
+
+Expected Result: An error message is displayed indicating that the credentials are incorrect.
+
+---
+
+Test Case 3: Invalid Password
+
+Description: Verify that the user cannot log in with an invalid password.
+  
+Steps:
+1. Enter a valid username ("Admin").
+2. Enter an invalid password ("wrongpassword").
+3. Click the "Login" button.
+
+Expected Result: An error message is displayed indicating that the credentials are incorrect.
+
+---
+
+Test Case 4: Blank Username
+
+Description: Verify that the user cannot log in with a blank username.  
+
+Steps:
+1. Leave the username field blank.
+2. Enter a valid password ("admin123").
+3. Click the "Login" button.
+
+Expected Result: An error message is displayed indicating that the username is required.
+
+---
+
+Test Case 5: Blank Password
+
+Description: Verify that the user cannot log in with a blank password.  
+ 
+Steps:
+1. Enter a valid username ("Admin").
+2. Leave the password field blank.
+3. Click the "Login" button.
+  
+Expected Result: An error message is displayed indicating that the password is required.
+
+---
+
+Test Case 6: SQL Injection Attempt
+
+Description: Verify that the application is secure against SQL injection.  
+
+Steps:
+1. Enter an SQL injection string in the username field ("' OR '1'='1").
+2. Enter any password.
+3. Click the "Login" button.
+
+Expected Result: An error message is displayed, and the user is not logged in.
+
+---
+
+Test Case 7: Login Page Accessibility
+
+Description: Verify that the login page is accessible.  
+  
+Steps:
+1. Navigate to the login page URL.
+ 
+Expected Result: The login page is displayed without errors.
